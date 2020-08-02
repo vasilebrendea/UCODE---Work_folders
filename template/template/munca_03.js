@@ -123,58 +123,60 @@ console.log(prods);
 
 console.log(add(3)); */
 
-
 // ------------------------------------- EXERCITIU 3 ------------------------------------//
-
 
 // 1. WAF which prints to the console element by element from array
 
-const array1 = ['Vasile','Grigore','Mircea'];
+const array1 = ["Vasile", "Grigore", "Mircea"];
 
-// forEach 
+// forEach
 array1.forEach(function (name) {
-    console.log(name);
+  console.log(name);
 });
 
-array1.forEach(name => console.log(name));
+array1.forEach((name) => console.log(name));
 
-// map 
+// map
 array1.map(function (item) {
-    console.log(item);
+  console.log(item);
 });
 
-array1.map(item => console.log('Huning' + ' ' + item));
+array1.map((item) => console.log("Huning" + " " + item));
 
-//reduce 
+//reduce
 const names = array1.reduce(function (total, name) {
-     return total + ', ' + name;
+  return total + ", " + name;
 });
 console.log(names);
 
 // 2. WAF which receive an array of numbers and returns the sum of elements from array
 
-var array2 = [1,2,3,4,5,6];
+var array2 = [1, 2, 3, 4, 5, 6];
 
-// reduce 
-const sumOfNumbersWithReduce = array2.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-}, 0);
+// reduce
+const sumOfNumbersWithReduce = array2.reduce(function (
+  accumulator,
+  currentValue
+) {
+  return accumulator + currentValue;
+},
+0);
 
 console.log(sumOfNumbersWithReduce);
 
 // forEach
 var sum = 0;
 
-const sumOfNumberWithForEach = array2.forEach(function(item) {
-      sum += item;
+const sumOfNumberWithForEach = array2.forEach(function (item) {
+  sum += item;
 });
 console.log(sum);
 
-// map 
+// map
 var sum2 = 0;
 
 const sumOfNumbersWithMap = array2.map(function (numbers) {
-    sum2 += numbers;
+  sum2 += numbers;
 });
 console.log(sum2);
 
@@ -183,29 +185,28 @@ console.log(sum2);
 var array3 = [11, 12, 13, 14, 15, 16];
 
 // use filter and reduce
-const evenNumbers = array3.filter(function(item) {
-    if (item %2 === 0) {
-        return true;
-    }
+const evenNumbers = array3.filter(function (item) {
+  if (item % 2 === 0) {
+    return true;
+  }
 });
 
-var sumOfEven = evenNumbers.reduce((total, item) =>
-     total + item, 0);
+var sumOfEven = evenNumbers.reduce((total, item) => total + item, 0);
 console.log(sumOfEven);
 
 // use filter and forEach
 var sumForEach = 0;
 
 evenNumbers.forEach(function (numbers) {
-     sumForEach += numbers;
+  sumForEach += numbers;
 });
 console.log(sumForEach);
 
 // use filter and map
 var sumMap = 0;
 
-evenNumbers.map(function(numbers) {
-    sumMap = sumMap + numbers;
+evenNumbers.map(function (numbers) {
+  sumMap = sumMap + numbers;
 });
 console.log(sumMap);
 
@@ -216,25 +217,25 @@ var array4 = [11, 12, 13, 14, 15, 16];
 // use slice
 var firstTreeElements = array4.slice(0, 3);
 
-// reduce 
-var sumOfFirstTreeElements = firstTreeElements.reduce(function(total, item) {
-     return total + item;
+// reduce
+var sumOfFirstTreeElements = firstTreeElements.reduce(function (total, item) {
+  return total + item;
 }, 0);
 console.log(sumOfFirstTreeElements);
 
 // forEach
 var sum5 = 0;
 
-firstTreeElements.forEach(function(item) {
-    sum5 += item;
+firstTreeElements.forEach(function (item) {
+  sum5 += item;
 });
 console.log(sum5);
 
 //map
 var sum6 = 0;
 
-firstTreeElements.map(function(numbers) {
-    sum6 += numbers;
+firstTreeElements.map(function (numbers) {
+  sum6 += numbers;
 });
 console.log(sum6);
 
@@ -242,22 +243,22 @@ console.log(sum6);
 
 // 6. WAF which returns an array of n elements; ex: createEmptyArray(3) ==> [0,0,0]
 
-var emptyArray = [0,0,0];
+var emptyArray = [0, 0, 0];
 //console.log(emptyArray.fill(3));
-function fillNumber (numbers) {
-     var newArray = numbers.fill(3);
-     console.log(newArray);
-};
+function fillNumber(numbers) {
+  var newArray = numbers.fill(3);
+  console.log(newArray);
+}
 fillNumber(emptyArray);
 
 // 7. WAF with 2 parameters (min, max) WR a random number between min and max
 
-function randomNumbers (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+function randomNumbers(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 console.log(randomNumbers(3, 7));
 
-// 8. WAF WR with parameter n which returns an array of random n numbers  between min and max 
+// 8. WAF WR with parameter n which returns an array of random n numbers  between min and max
 
 var newArray = [0];
 var randomNum = Math.floor(Math.random() * 10) + 1;
@@ -266,52 +267,50 @@ console.log(newArray);
 
 // 9. WAF (write a function) (arr1, arr2) which concatenate 2 arrays
 
-var baieti = ['Vasile', 'Marius','David', 'Aris'];
-var fete = ['Mariana', 'Andreea', 'Adela'];
+var baieti = ["Vasile", "Marius", "David", "Aris"];
+var fete = ["Mariana", "Andreea", "Adela"];
 
 // use concat()
-function grupUcode (arrays) {
-    var concatArrays = arrays.concat(baieti);
-    console.log(concatArrays);
-};
+function grupUcode(arrays) {
+  var concatArrays = arrays.concat(baieti);
+  console.log(concatArrays);
+}
 grupUcode(fete);
 
 // use forEach
 
-
 // use reduce
 fete = baieti.reduce(function (total, item) {
-       total.push(item);
-       return total;
+  total.push(item);
+  return total;
 }, fete);
 console.log(fete);
 
 // use map
-
 
 // 10; use ternary operator over a numeric value n; if n< 18 will return true otherwise false;
 
 var age = 15;
 
 if (age >= 18) {
-     console.log('Can drink beer !');
+  console.log("Can drink beer !");
 } else {
-    console.log('Can drink just Juice !');
-};
+  console.log("Can drink just Juice !");
+}
 
 // 11. sort an array of numbers  ascendent
 
 var numbersArray = [8, 4, 12, 38, 1, 110, 6];
-numbersArray.sort(function(a, b) {
-    return a-b;
+numbersArray.sort(function (a, b) {
+  return a - b;
 });
 console.log(numbersArray);
 
 // 12. sort an array of numbers  descendent
 
 var numbersArray = [8, 4, 12, 38, 1, 110, 6];
-numbersArray.sort(function(a, b) {
-    return b-a;
+numbersArray.sort(function (a, b) {
+  return b - a;
 });
 console.log(numbersArray);
 
@@ -319,46 +318,45 @@ console.log(numbersArray);
 
 var numbersArray2 = [8, 4, 12, 38, 1, 110, 6];
 
-function booleanValue (value) {
-      if (value === 'ascendent') {
-        numbersArray.sort(function(a, b) {
-            return a-b;
-        });
-        console.log(numbersArray);
-      }else if(value === 'descendent') {
-        numbersArray.sort(function(a, b) {
-            return b-a;
-        });
-        console.log(numbersArray);
-      }else{
-          console.log(numbersArray2);
-      }
+function booleanValue(value) {
+  if (value === "ascendent") {
+    numbersArray.sort(function (a, b) {
+      return a - b;
+    });
+    console.log(numbersArray);
+  } else if (value === "descendent") {
+    numbersArray.sort(function (a, b) {
+      return b - a;
+    });
+    console.log(numbersArray);
+  } else {
+    console.log(numbersArray2);
+  }
 }
-booleanValue('ascendent');
+booleanValue("ascendent");
 
 // 14. WAF which receive a string and returns the sum of charcodes of each character from string
 
-var myName = 'dani';
-var myNameArray = myName.split('');
+var myName = "dani";
+var myNameArray = myName.split("");
 // console.log(myNameArray);
 var sumOfItems = 0;
 
-var sumOfCharcodes = myNameArray.forEach(function(numberFrom) {
-    var test = numberFrom.charCodeAt();
-    // console.log(test);
-    sumOfItems += test;
-})
+var sumOfCharcodes = myNameArray.forEach(function (numberFrom) {
+  var test = numberFrom.charCodeAt();
+  // console.log(test);
+  sumOfItems += test;
+});
 console.log(sumOfItems);
 
-
-function sumCharCodeIn (string) {
-    var stringToArray = string.split("");
-    var sum = 0;
-    stringToArray.forEach( function(char) {
-        var code = char.charCodeAt();
-        sum += code;
-    })
-    console.log(sum);
+function sumCharCodeIn(string) {
+  var stringToArray = string.split("");
+  var sum = 0;
+  stringToArray.forEach(function (char) {
+    var code = char.charCodeAt();
+    sum += code;
+  });
+  console.log(sum);
 }
 sumCharCodeIn("Vasile");
 
@@ -366,30 +364,29 @@ sumCharCodeIn("Vasile");
 
 var array5 = [66, 114, 101, 110, 100, 101, 97];
 
-function fromCharCodeToString (array) { 
-    array.forEach( function(number) {
-        var numberToString = String.fromCharCode(number);
-        console.log(numberToString);
-    });
+function fromCharCodeToString(array) {
+  array.forEach(function (number) {
+    var numberToString = String.fromCharCode(number);
+    console.log(numberToString);
+  });
 }
 fromCharCodeToString(array5);
- 
+
 // 16. WAF which receive a string and character; the response will be the reversed initial string without character: ex; removeChar('alabalaportocala') => 'lblportocl'
 
+function statusDoor(f) {
+  var modifiedDoor = "The door is " + f + " !";
+  console.log(modifiedDoor);
+}
+statusDoor("close");
 
-function statusDoor (f) {
-    var modifiedDoor = "The door is " + f + " !";
-    console.log(modifiedDoor);
-   }
-   statusDoor('close');
-
-function toogle (door) {
-    if (door === 'open') {
-        console.log("The door is " + door + " !");
-    }else if (door ==='close'){
-        console.log("The door is " + door + " !");
-    }else {
-        console.log('The door is locked !');
-    }
-} toogle('open');
-
+function toogle(door) {
+  if (door === "open") {
+    console.log("The door is " + door + " !");
+  } else if (door === "close") {
+    console.log("The door is " + door + " !");
+  } else {
+    console.log("The door is locked !");
+  }
+}
+toogle("open");

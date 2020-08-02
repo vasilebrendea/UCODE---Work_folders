@@ -41,13 +41,6 @@
 // function generatingNumbers() {
 //   for (let i = 0; i < 6; i++) {
 //     let generateNumbers = Math.floor(Math.random() * 49 + 1);
-//     for (let x = 0; x < game6_49.ramdomNumbers.length; x++) {
-//       if (x == i) {
-//         continue;
-//       } else if (game6_49.ramdomNumbers[i] == game6_49.ramdomNumbers[x]) {
-//         game6_49.ramdomNumbers[i] = Math.floor(Math.random() * 49 + 1);
-//       }
-//     }
 //     game6_49.ramdomNumbers.push(generateNumbers);
 //   }
 // }
@@ -119,7 +112,7 @@
 // pushUser(user3);
 // user3.addMessage("are");
 
-// // seeUser("Adi");
+// seeUser("Adi");
 
 // displayAllMessages();
 // console.log(allMessages);
