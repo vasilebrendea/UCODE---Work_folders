@@ -89,3 +89,14 @@
 // sortObject();
 
 // 9. sort an array of numbers by number of 1 from binary representation
+
+function Person(name, age, eyeColor) {
+  this.name = name;
+  this.age = age;
+  this.eyeColor = eyeColor;
+}
+
+let person01 = new Person("Vasile", 36, "blue");
+let person02 = new Person("Daniel", 30, "brown");
+console.log(person01);
+console.log(person02);
