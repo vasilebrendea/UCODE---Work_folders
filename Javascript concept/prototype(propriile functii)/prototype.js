@@ -24,7 +24,7 @@
 // let bob = new EmployyeC("Bob", 321, 85000);
 // console.log(bob.getMoreDetails());
 
-// trasform class in to prototype
+// transform class in to prototype
 
 // let PersonP = function (name, id) {
 //   this.name = name;

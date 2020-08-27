@@ -20,7 +20,3 @@
 // var userDaniel = new User("Daniel", "chesterdany@gmail.com");
 
 // userVasile.login().logout();
-
-// another exemple 
-
-

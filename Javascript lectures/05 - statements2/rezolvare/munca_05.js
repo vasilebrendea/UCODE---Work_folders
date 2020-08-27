@@ -56,9 +56,9 @@
 
 // 5.having an array of nummbers, print the current date to the console after x seconds
 
-var printCurrentDate = (arr) =>
-  arr.map((el) => setTimeout(() => console.log(new Date()), el * 1000));
-printCurrentDate([1, 5, 6]);
+// var printCurrentDate = (arr) =>
+//   arr.map((el) => setTimeout(() => console.log(new Date()), el * 1000));
+// printCurrentDate([1, 5, 6]);
 
 // 6. implement double click. WAF WHICH prints to the console "double click" in case the function was triggered twice in a specific interval
 

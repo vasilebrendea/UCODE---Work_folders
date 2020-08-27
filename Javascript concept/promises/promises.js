@@ -32,3 +32,5 @@
 // Promise.all([getImage1, getImage2, getImage3]).then((message) => {
 //   console.log(message);
 // });
+
+// another example
