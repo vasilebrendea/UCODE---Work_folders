@@ -8,7 +8,7 @@
 // }
 // multipleWithThenSelf([1, 2, 3]);
 
-//// prototype function ////////
+// // prototype function ////////
 
 // Array.prototype.myMap = function (callback) {
 //   let array = [];
