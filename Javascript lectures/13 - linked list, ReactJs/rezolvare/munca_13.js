@@ -41,24 +41,114 @@ It should look like this:
 
 Sam Harris => S.H */
 
-function initial(val) {
-  const regex = /[A-Z]/g;
-  const found = val.match(regex);
-  const final = found.join(".");
-  console.log(final);
-}
-initial("Vasile Brendea");
+// function initial(val) {
+//   const regex = /[A-Z]/g;
+//   const found = val.match(regex);
+//   const final = found.join(".");
+//   console.log(final);
+// }
+// initial("Vasile Brendea");
 
 // 4. Convert an array in linked list
 
-// function convertArr(arr) {
-//   let list = null;
-//   for (let i = arr.length - 1; i >= 0; i--) {
-//     list = {
-//       value: arr[i],
-//       ref: list,
-//     };
+let ll = function convertArr(arr) {
+  let list = null;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    list = {
+      value: arr[i],
+      ref: list,
+    };
+  }
+  return list;
+};
+console.log(ll([10, 20, 30, 40, 50]));
+
+// another way to create linkedList
+
+// class Node {
+//   constructor(data, next = null) {
+//     this.data = data;
+//     this.next = next;
 //   }
-//   return list;
 // }
-// console.log(convertArr([10, 20, 30, 40, 50]));
+
+// class LinkedList {
+//   constructor() {
+//     this.head = null;
+//     this.size = 0;
+//   }
+
+//   // insert first Node
+//   insertFirst(data) {
+//     this.head = new Node(data, this.head);
+//     this.size++;
+//   }
+
+//   // insert last
+//   insertLast(data) {
+//     let node = new Node(data);
+//     let current;
+//     if (!this.head) {
+//       this.head = node;
+//     } else {
+//       current = this.head;
+//       while (current.next) {
+//         current = current.next;
+//       }
+//       current.next = node;
+//     }
+//     this.size++;
+//   }
+
+//   // delete at index
+//   deleteAt(index) {
+//     if (index > 0 && index > this.size) {
+//       return;
+//     }
+//     let current = this.head;
+//     let previous;
+//     let count = 0;
+//     if (index === 0) {
+//       this.head = current.next;
+//     } else {
+//       while (count < index) {
+//         count++;
+//         previous = current;
+//         current = current.next;
+//       }
+//       previous.next = current.next;
+//     }
+//     this.size--;
+//   }
+// }
+
+// const ll = new LinkedList();
+// ll.insertFirst(100);
+// ll.insertFirst(200);
+// ll.insertLast(300);
+// ll.insertLast(400);
+// ll.deleteAt(2);
+// console.log(ll);
+
+// 5. convert a number to a string
+
+// function numberToString(num) {
+//   console.log(num);
+// }
+// numberToString("67");
+
+/* 6. Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it. If the two numbers are equal return a or b.
+Note: a and b are not ordered! */
+
+// function getSum(a, b) {
+//   let sum = 0;
+//   for (let i = a; i <= b; i++) {
+//     if (a === b) {
+//       sum = a;
+//     } else {
+//       sum += i;
+//     }
+//   }
+//   console.log(sum);
+// }
+// getSum(0, -2);
