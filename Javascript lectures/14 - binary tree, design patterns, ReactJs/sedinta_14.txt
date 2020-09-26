@@ -1,0 +1,33 @@
+
+
+- [1,5,8,9,11,14,17,25,64,89]
+- sa se returneze daca exista un numar in array
+- sa se returneze pozitia unui numar in array
+
+
+
+- pls create a binary tree from an array;
+[1,8,52,17, 4, 78,6,11,91]
+
+4 e root
+puteti merge pe premisa ca rootul e elementul din mijloc
+
+https://www.youtube.com/watch?v=VCTP81Ij-EM
+
+
+
+
+
+
+- create a balanced tree from an aray
+- convert binary tree to a balanced tree
+- sa se tipareasca suma valorilor de pe fiecare nivel dintr-un arbore
+- se da un arbore;sa se returneze numarul maxim de zig -zaguri existent 
+
+
+- arbori
+- 
+
+
+
+mediator vs proxy
