@@ -67,107 +67,105 @@ Sam Harris => S.H */
 
 // another way to create linkedList
 
-class Node {
-  constructor(data, next = null) {
-    this.data = data;
-    this.next = next;
-  }
-}
+// class Node {
+//   constructor(data, next = null) {
+//     this.data = data;
+//     this.next = next;
+//   }
+// }
 
-class LinkedList {
-  constructor() {
-    this.head = null;
-    this.size = 0;
-  }
+// class LinkedList {
+//   constructor() {
+//     this.head = null;
+//     this.size = 0;
+//   }
 
-  // insert first Node
-  insertFirst(data) {
-    this.head = new Node(data, this.head);
-    this.size++;
-  }
+//   // insert first Node
+//   insertFirst(data) {
+//     this.head = new Node(data, this.head);
+//     this.size++;
+//   }
 
-  // insert last
-  insertLast(data) {
-    let node = new Node(data);
-    let current;
-    if (!this.head) {
-      this.head = node;
-    } else {
-      current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = node;
-    }
-    this.size++;
-  }
+//   // insert last
+//   insertLast(data) {
+//     let node = new Node(data);
+//     let current;
+//     if (!this.head) {
+//       this.head = node;
+//     } else {
+//       current = this.head;
+//       while (current.next) {
+//         current = current.next;
+//       }
+//       current.next = node;
+//     }
+//     this.size++;
+//   }
 
-  // delete at index
-  deleteAt(index) {
-    if (index > 0 && index > this.size) {
-      return;
-    }
-    let current = this.head;
-    let previous;
-    let count = 0;
-    if (index === 0) {
-      this.head = current.next;
-    } else {
-      while (count < index) {
-        count++;
-        previous = current;
-        current = current.next;
-      }
-      previous.next = current.next;
-    }
-    this.size--;
-  }
+//   // delete at index
+//   deleteAt(index) {
+//     if (index > 0 && index > this.size) {
+//       return;
+//     }
+//     let current = this.head;
+//     let previous;
+//     let count = 0;
+//     if (index === 0) {
+//       this.head = current.next;
+//     } else {
+//       while (count < index) {
+//         count++;
+//         previous = current;
+//         current = current.next;
+//       }
+//       previous.next = current.next;
+//     }
+//     this.size--;
+//   }
 
-  // reverse list
-  // ??????????????????????????????????????????????????????/
-  reverse() {
-    if (!this.head) {
-      return false;
-    }
-    let node = this.head;
-    this.head = node;
-    let prev = null;
-    let next;
-    for (let i = 0; i < this.length; i++) {
-      next = node.next;
-      node.next = prev;
-      prev = node;
-      node = next;
-    }
-    return node;
-  }
+//   // reverse list
+//   // ??????????????????????????????????????????????????????/
+//   // reverse() {
+//   //   if (!this.head) {
+//   //     return false;
+//   //   }
+//   //   let prev = null;
+//   //   let next;
+//   //   while (data) {
+//   //     next = data.next;
+//   //     data.next = prev;
+//   //     prev = data;
+//   //     data = next;
+//   //   }
+//   //   return prev;
+//   // }
 
-  // ??????????????????????????????????????????????????????/
+//   // ??????????????????????????????????????????????????????/
 
-  // print list
-  print() {
-    let current = this.head;
-    let count = 0;
-    let arr = [];
-    while (count < this.size) {
-      arr.push(current.data);
-      current = current.next;
-      count++;
-    }
-    console.log(arr);
-  }
-}
+//   // print list
+//   print() {
+//     let current = this.head;
+//     let count = 0;
+//     let arr = [];
+//     while (count < this.size) {
+//       arr.push(current.data);
+//       current = current.next;
+//       count++;
+//     }
+//     console.log(arr);
+//   }
+// }
 
-const ll = new LinkedList();
-ll.insertFirst(100);
-ll.insertFirst(200);
-ll.insertFirst(300);
-ll.insertFirst(400);
-ll.reverse();
-ll.deleteAt(1);
-ll.print();
+// const ll = new LinkedList();
+// ll.insertFirst(100);
+// ll.insertFirst(200);
+// ll.insertFirst(300);
+// ll.insertFirst(400);
 
-console.log(ll);
+// ll.deleteAt(1);
+// ll.print();
+
+// console.log(ll);
 
 // 5. convert a number to a string
 
@@ -192,4 +190,4 @@ Note: a and b are not ordered! */
 // }
 // getSum(0, -2);
 
-// ??????????????????????????????????????????????????????/
+// ??????????????????????????????????????????????????????
