@@ -57,6 +57,7 @@
 // let totalAge = function () {
 //   return this.age + this.updateAge();
 // };
+
 // let fixedTotalAge = totalAge.bind(person2);
 // console.log(fixedTotalAge());
 
