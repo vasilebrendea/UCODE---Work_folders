@@ -1,7 +1,5 @@
 // 1. FizzBuzz simple question solution
 
-// first method
-
 // for (let i = 1; i <= 100; i++) {
 //   if (i % 3 === 0 && i % 5 === 0) {
 //     console.log("Fizz Buzz");
@@ -14,7 +12,7 @@
 //   }
 // }
 
-// second method
+///////////////////////////////////////////////////////////////////////////////
 
 // for (let i = 1; i <= 100; i++) {
 //   let output = "";
@@ -45,7 +43,7 @@
 //     b = 0,
 //     temp;
 
-//   while (num >= 0) {
+//   while (num > 0) {
 //     temp = a;
 //     a = a + b;
 //     b = temp;
@@ -54,6 +52,32 @@
 //   console.log(b);
 // }
 // fibonaci(9);
+
+////////////////////////////////////////////////////////////////////////////////
+
+// var fibon = function (n) {
+//   return n < 2 ? n : fibon(n - 1) + fibon(n - 2);
+// };
+// console.log(fibon(9));
+
+////////////////////////////////////////////////////////////////////////////////
+
+// var fibonaci = (function () {
+//   var memo = [0, 1];
+//   var fib = function (n) {
+//     var result = memo[n];
+//     if (typeof result !== "number") {
+//       result = fib(n - 1) + fib(n - 2);
+//       memo[n] = result;
+//     }
+//     return result;
+//   };
+//   return fib;
+// })();
+
+// console.log(fibonaci(9));
+
+/////////////////////////////////////////////////////////////////////////////////
 
 // var fib = [];
 
@@ -72,7 +96,7 @@
 
 // console.log(UpperFirstCaracter("anna"));
 
-/////////////// or ///////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // function firstCharact(str) {
 //   let firstChar = str.charAt(0).toUpperCase();
@@ -93,10 +117,10 @@
 // };
 // twoSum([2, 7, 11, 15], 9);
 
-// another way
+////////////////////////////////////////////////////////////////////////////////
 
 // const twoSum = (nums, target) => {
-//     const prevNums = {};
+//     const prevNums = {}; // ?
 //     for (let i = 0; i < nums.length; i++) {
 //       let currentNum = nums[i];
 //       let setNum = target - currentNum;
@@ -141,7 +165,7 @@
 // }
 // deleteVovels("Vasile is at home!");
 
-/////////////////// or ////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
 
 // function deleteVovels(str) {
 //   console.log(str.replace(/[aeiou]/gi, ""));
@@ -215,4 +239,54 @@ var longestCommonPrefix = function (strs) {};
 // };
 // console.log(middleChar("A"));
 
-// 14. String repeat
+// 14. Calculate peopleInLine to a movie, ticket value in 25$ and ca people have just 25$, 50$, and 100$
+
+// function tickets(peopleInLine) {
+//   let restOfMoney = 0;
+//   let restToPeople = 0;
+//   let ticketValue = 25;
+//   peopleInLine.forEach((element) => {
+//     if (element == ticketValue) {
+//       restOfMoney += ticketValue;
+//     } else if (element > ticketValue) {
+//       restToPeople += element - ticketValue;
+//     }
+//   });
+//   if (restOfMoney < restToPeople) {
+//     console.log("No");
+//   } else {
+//     console.log("yes");
+//   }
+//   console.log(restOfMoney);
+//   console.log(restToPeople);
+// }
+// tickets([25, 25, 50]);
+
+// 15. Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+
+// function arithmetic(a, b, operator) {
+//   if (operator === "add") {
+//     console.log(a + b);
+//   }
+//   if (operator === "subtract") {
+//     console.log(a - b);
+//   }
+//   if (operator === "multiply") {
+//     console.log(a * b);
+//   }
+//   if (operator === "divide") {
+//     console.log(Math.floor(a / b));
+//   }
+// }
+// arithmetic(5, 2, "divide");
+
+// 16. factorial number
+
+// function factorial(num) {
+//   if (num == 1) {
+//     return num;
+//   } else {
+//     return num * factorial(num - 1);
+//   }
+// }
+// console.log(factorial(5));
