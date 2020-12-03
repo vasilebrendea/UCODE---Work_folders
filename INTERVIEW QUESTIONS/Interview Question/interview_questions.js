@@ -119,20 +119,20 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// const twoSum = (nums, target) => {
-//     const prevNums = {}; // ?
-//     for (let i = 0; i < nums.length; i++) {
-//       let currentNum = nums[i];
-//       let setNum = target - currentNum;
-//       let index2 = prevNums[setNum];
-//       if (index2 != null) {
-//         console.log([index2, i]);
-//       } else {
-//         prevNums[currentNum] = i;
-//       }
-//     }
-//   };
-//   twoSum([1, 2, 4, 7, 9], 13);
+const twoSum = (nums, target) => {
+  const prevNums = {}; // ?
+  for (let i = 0; i < nums.length; i++) {
+    let currentNum = nums[i];
+    let setNum = target - currentNum;
+    let index2 = prevNums[setNum];
+    if (index2 != null) {
+      console.log([index2, i]);
+    } else {
+      prevNums[currentNum] = i;
+    }
+  }
+};
+twoSum([1, 2, 4, 7, 9], 13);
 
 // 6. reverse integer
 
