@@ -4,15 +4,15 @@ closure
 - take a look over the javascript closure from documentation
 
 
-1. please waf prototype whcj implements the map BUT not returns another instance of the array; mymap
+// 1. please waf prototype whcj implements the map BUT not returns another instance of the array; mymap
 
-	- [1,2,3] ==> [1,4,9] 
-	arr1 --> arr2
+// 	- [1,2,3] ==> [1,4,9] 
+// 	arr1 --> arr2
 
-	arr1 --> arr1 [1,4,9]
+// 	arr1 --> arr1 [1,4,9]
 
 
-Array.prototype.mymap ....
+// Array.prototype.mymap ....
 
 
 2. Please write a system for a store. 
